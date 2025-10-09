@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitCRM - New Client</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- FitCRM - New Client Form Page -->
+  <header>
+    <h1>FitCRM</h1>
+    <nav>
+      <a href="index.html" class="active">New Client</a>
+      <a href="clients.html">Client List</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>New Client Form</h2>
+      <!-- Client information form -->
+      <form>
+        <label for="name">Full Name:</label>
+        <input id="name" type="text" placeholder="e.g. Amina Hassan" required>
+
+        <label for="age">Age:</label>
+        <input id="age" type="number" min="0" placeholder="e.g. 28">
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="someone@example.com">
+
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel" placeholder="+20 1X XXX XXXX">
+
+        <label for="goal">Fitness Goal:</label>
+        <select id="goal">
+          <option value="">Select a goal</option>
+          <option>Weight Loss</option>
+          <option>Muscle Gain</option>
+          <option>General Fitness</option>
+          <option>Rehabilitation</option>
+        </select>
+
+        <!-- Placeholder button -->
+        <button type="button">Add Client (Placeholder)</button>
+      </form>
+
+      <p><a href="clients.html">View Client List</a></p>
+    </section>
+  </main>
+</body>
+</html>
