@@ -25,3 +25,4 @@ If deployment doesn’t work, open the project locally:
 ## Author
 Ibrahim Yehia
 (forcing rebuild)
+(trigger rebuild)
