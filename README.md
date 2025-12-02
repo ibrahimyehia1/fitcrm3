@@ -1,2 +1,1 @@
-# FitCRM Assignment 2
-This project extends Assignment 1 and adds dynamic client pages, search, and API simulation.
+Validated Assignment 2 with full form validation and client pages.
