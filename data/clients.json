@@ -1,17 +1,24 @@
 [
   {
-    "id": 1,
-    "name": "John Doe",
-    "phone": "0100000001"
+    "id": "id-sample1",
+    "name": "Alice Gomez",
+    "age": 32,
+    "email": "alice@example.com",
+    "phone": "+20111222333",
+    "goal": "Build muscle",
+    "startDate": "2025-09-01",
+    "history": "Joined September 2025",
+    "exercises": ""
   },
   {
-    "id": 2,
-    "name": "Sarah Ali",
-    "phone": "0100000002"
-  },
-  {
-    "id": 3,
-    "name": "Michael Smith",
-    "phone": "0100000003"
+    "id": "id-sample2",
+    "name": "Bilal Ahmed",
+    "age": 26,
+    "email": "bilal@example.com",
+    "phone": "+201098765432",
+    "goal": "Improve endurance",
+    "startDate": "2025-10-10",
+    "history": "Running program",
+    "exercises": ""
   }
 ]

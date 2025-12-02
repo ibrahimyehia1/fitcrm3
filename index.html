@@ -1,13 +1,103 @@
-<!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Add Client</title>
-<link rel="stylesheet" href="css/styles.css"><script src="js/main.js" defer></script></head>
-<body><h1>Add Client</h1>
-<form id="addClientForm">
-<label>Name</label><input id="name" required>
-<label>Email</label><input id="email" required>
-<label>Age</label><input id="age" type="number" required>
-<label>Phone</label><input id="phone" required>
-<button type="submit">Add</button>
-</form><p id="formMsg"></p>
-<a href="clients.html">View Clients</a>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Simple Client Manager</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>FitCRM</h1>
+    <nav>
+      <button id="nav-new" class="primary">+ New Client</button>
+      <button id="nav-list" class="secondary">Client List</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- New Client Form -->
+    <section id="view-new" class="view hidden">
+      <h2 id="form-title">Add Client</h2>
+      <form id="client-form" novalidate>
+        <input type="hidden" id="client-id" />
+        <div class="grid">
+          <label>
+            Name <input id="name" name="name" required />
+            <small class="err" id="err-name"></small>
+          </label>
+          <label>
+            Age <input id="age" name="age" type="number" min="1" required />
+            <small class="err" id="err-age"></small>
+          </label>
+          <label>
+            Email <input id="email" name="email" type="email" required />
+            <small class="err" id="err-email"></small>
+          </label>
+          <label>
+            Phone <input id="phone" name="phone" pattern="^\+?[0-9\s\-]{7,20}$" required />
+            <small class="err" id="err-phone"></small>
+          </label>
+          <label>
+            Fitness Goal <input id="goal" name="goal" />
+          </label>
+          <label>
+            Membership Start Date <input id="startDate" name="startDate" type="date" />
+          </label>
+        </div>
+
+        <label>
+          Training History (notes) <textarea id="history" name="history"></textarea>
+        </label>
+        <label>
+          Exercises for next session (optional) <textarea id="exercises" name="exercises"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" id="save-btn" class="primary">Save</button>
+          <button type="button" id="cancel-btn" class="secondary">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Client List -->
+    <section id="view-list" class="view">
+      <h2>Clients</h2>
+      <div class="list-controls">
+        <input id="search" placeholder="Search by name" />
+        <button id="search-btn">Search</button>
+        <button id="clear-search">Clear</button>
+        <button id="import-data" title="Import sample data">Import sample data</button>
+      </div>
+      <ul id="client-list" class="clients"></ul>
+    </section>
+
+    <!-- Client View -->
+    <section id="view-client" class="view hidden">
+      <button id="back-to-list" class="secondary">← Back</button>
+      <h2 id="client-name">Client Name</h2>
+      <dl class="client-details">
+        <dt>Age</dt><dd id="client-age"></dd>
+        <dt>Email</dt><dd id="client-email"></dd>
+        <dt>Phone</dt><dd id="client-phone"></dd>
+        <dt>Fitness Goal</dt><dd id="client-goal"></dd>
+        <dt>Membership Start Date</dt><dd id="client-start"></dd>
+        <dt>Training History</dt><dd id="client-history"></dd>
+        <dt>Exercises for next session</dt><dd id="client-exercises"></dd>
+      </dl>
+
+      <h3>Suggested Exercises (fetched from Wger or fallback)</h3>
+      <ul id="suggested-exercises" class="ex-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>FitCRM — Frontend-only demo. Data stored in localStorage.</small>
+  </footer>
+
+  <!-- modules -->
+  <script type="module" src="js/clients.js"></script>
+  <script type="module" src="js/client.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
