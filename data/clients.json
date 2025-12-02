@@ -1,24 +1,32 @@
 [
   {
-    "id": "id-sample1",
-    "name": "Alice Gomez",
-    "age": 32,
-    "email": "alice@example.com",
-    "phone": "+20111222333",
-    "goal": "Build muscle",
-    "startDate": "2025-09-01",
-    "history": "Joined September 2025",
-    "exercises": ""
+    "id": "id-client1",
+    "name": "Ahmed Hassan",
+    "age": 30,
+    "email": "ahmed.hassan@example.com",
+    "phone": "+201000111222",
+    "goal": "Lose 5 kg",
+    "startDate": "2025-08-15",
+    "history": [
+      "Initial assessment done on 2025-08-15"
+    ],
+    "exercises": [
+      "Push-ups \u2014 3x10"
+    ]
   },
   {
-    "id": "id-sample2",
-    "name": "Bilal Ahmed",
-    "age": 26,
-    "email": "bilal@example.com",
-    "phone": "+201098765432",
-    "goal": "Improve endurance",
-    "startDate": "2025-10-10",
-    "history": "Running program",
-    "exercises": ""
+    "id": "id-client2",
+    "name": "Mona Yousry",
+    "age": 27,
+    "email": "mona.yousry@example.com",
+    "phone": "+201099988877",
+    "goal": "Build muscle",
+    "startDate": "2025-09-05",
+    "history": [
+      "Joined 2025-09-05 \u2014 program started"
+    ],
+    "exercises": [
+      "Bodyweight Squats \u2014 3x12"
+    ]
   }
 ]

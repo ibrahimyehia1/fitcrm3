@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Client List (Page 2)</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>FitCRM</h1>
+    <nav>
+      <a href="index.html" class="nav-btn">+ New Client</a>
+      <a href="list.html" class="nav-btn active">Client List</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Client List (Page 2)</h2>
+      <div class="list-controls">
+        <input id="search" placeholder="Search by name" />
+        <button id="search-btn" class="btn">Search</button>
+        <button id="clear-btn" class="btn">Clear</button>
+        <button id="import-btn" class="btn">Import sample data</button>
+      </div>
+      <ul id="client-list" class="clients"></ul>
+    </section>
+  </main>
+
+  <footer class="center">Click a client name to go to Page 3 (Client View).</footer>
+
+  <script type="module" src="js/clients.js"></script>
+  <script type="module" src="js/list.js"></script>
+</body>
+</html>

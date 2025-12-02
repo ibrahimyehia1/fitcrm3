@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Client View (Page 3)</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>FitCRM</h1>
+    <nav>
+      <a href="index.html" class="nav-btn">+ New Client</a>
+      <a href="list.html" class="nav-btn">Client List</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <button id="back" class="btn secondary">← Back to List</button>
+      <h2 id="client-name">Client</h2>
+      <dl class="details">
+        <dt>Name</dt><dd id="d-name"></dd>
+        <dt>Age</dt><dd id="d-age"></dd>
+        <dt>Email</dt><dd id="d-email"></dd>
+        <dt>Phone</dt><dd id="d-phone"></dd>
+        <dt>Fitness Goal</dt><dd id="d-goal"></dd>
+        <dt>Membership Start Date</dt><dd id="d-start"></dd>
+        <dt>Training History</dt><dd id="d-history"></dd>
+        <dt>Exercises for next session</dt><dd id="d-exercises"></dd>
+      </dl>
+
+      <div class="card small">
+        <h3>Suggested Exercises (5)</h3>
+        <ul id="suggested"></ul>
+      </div>
+
+      <div class="card small">
+        <h3>Add training note</h3>
+        <textarea id="new-note" placeholder="e.g. 2025-11-01: Progress-check"></textarea>
+        <div class="form-actions">
+          <button id="add-note" class="btn primary">Add Note</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="center">Page 3 shows full client details and suggested exercises from Wger (fallback if API fails).</footer>
+
+  <script type="module" src="js/clients.js"></script>
+  <script type="module" src="js/view.js"></script>
+</body>
+</html>

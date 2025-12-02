@@ -1,34 +1,37 @@
 
-# FitCRM — Assignment 2 (Adjusted)
+# FitCRM — Assignment 2 (Final Submission)
 
-This release includes all required files and additional modules for clarity and maintainability.
+This project implements Assignment 2 requirements for FitCRM — Simple Client Manager (Frontend-only).
 
-## What changed (matching your comments)
-- Added `age` field and validation (age must be > 0 and realistic)
-- Email format validation and phone pattern validation
-- Split JavaScript into modules:
-  - `js/clients.js` — storage and helper functions
-  - `js/client.js` — validation and client model creation
-  - `js/main.js` — UI, event handling, rendering
-- Included `data/clients.json` sample file (can import via the UI "Import sample data" button)
-- Improved visual design with blue & white theme
-- All required features implemented (Add/Edit/Delete/Search/View, localStorage persistence, suggested exercises via Wger)
+## Pages
+- **Page 1 (index.html)** — New Client form (add / edit with validation)
+- **Page 2 (list.html)** — Client List (search, edit, delete, view)
+- **Page 3 (view.html)** — Client View (detailed view, training history, suggested exercises)
 
-## Files
-- index.html
+## Features implemented (all requirements)
+- Add Client: saves to localStorage (persist across refresh).
+- Edit Client: edit form repopulates existing data (use index.html?edit=<id> or Edit button on list).
+- Delete Client: removes from list and localStorage with confirmation.
+- Search: fetch by name and filter list.
+- View: click client to go to Page 3 (view.html?id=<id>) and display required fields.
+- Client View displays: Name, Email, Phone, Fitness Goal, Membership Start Date, Training history (array), Exercises for next session.
+- Suggested exercises: fetches 5 exercises from Wger API; falls back to local suggestions if unavailable.
+- Validations: name/email/phone/age (age &gt; 0 &lt;= 120), email format, phone pattern.
+- Responsive layout and blue & white visual theme.
+- File structure matches suggested layout.
+
+## Files included
+- index.html, list.html, view.html
 - css/styles.css
-- js/clients.js
-- js/client.js
-- js/main.js
-- data/clients.json
+- js/clients.js, js/client.js, js/new_client.js, js/list.js, js/view.js
+- data/clients.json (sample two clients)
 - README.md
 
-## Run locally
-Serve with a simple static server for full functionality:
+## Notes
+- To test the sample data import: open `list.html` and click "Import sample data" (it will not duplicate if your localStorage already has entries).
+- For full API functionality, serve the folder via a simple static server (recommended):
+  ```bash
+  python -m http.server 8000
+  ```
+  then open http://localhost:8000/list.html
 
-```bash
-python -m http.server 8000
-# open http://localhost:8000
-```
-
-Note: Wger API calls require network; fallback list exists if unavailable.
