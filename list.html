@@ -3,34 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FitCRM — Client List (Page 2)</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>FitCRM — Clients</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header>
-    <h1>FitCRM</h1>
-    <nav>
-      <a href="index.html" class="nav-btn">+ New Client</a>
-      <a href="list.html" class="nav-btn active">Client List</a>
+<body class="theme-light">
+  <header class="site-header">
+    <div class="brand"><a href="index.html">FitCRM</a></div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">New Client</a>
+      <a href="list.html" class="nav-link active">Clients</a>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="page container">
     <section class="card">
-      <h2>Client List (Page 2)</h2>
-      <div class="list-controls">
-        <input id="search" placeholder="Search by name" />
+      <h1 class="title">Client List</h1>
+      <div class="controls">
+        <input id="search" placeholder="Search by name..." />
         <button id="search-btn" class="btn">Search</button>
-        <button id="clear-btn" class="btn">Clear</button>
+        <button id="clear-btn" class="btn ghost">Clear</button>
         <button id="import-btn" class="btn">Import sample data</button>
       </div>
-      <ul id="client-list" class="clients"></ul>
+      <ul id="client-list" class="client-list"></ul>
     </section>
   </main>
 
-  <footer class="center">Click a client name to go to Page 3 (Client View).</footer>
-
+  <footer class="site-footer">Click a client to view details (Page 3).</footer>
   <script type="module" src="js/clients.js"></script>
-  <script type="module" src="js/list.js"></script>
+  <script type="module" src="js/listClients.js"></script>
 </body>
 </html>

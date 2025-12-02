@@ -3,87 +3,64 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FitCRM — Add Client (Page 1)</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>FitCRM — Add Client</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header>
-    <h1>FitCRM</h1>
-    <nav>
-      <a href="index.html" class="nav-btn active">+ New Client</a>
-      <a href="list.html" class="nav-btn">Client List</a>
+<body class="theme-light">
+  <header class="site-header">
+    <div class="brand"><a href="index.html">FitCRM</a></div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link active">New Client</a>
+      <a href="list.html" class="nav-link">Clients</a>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="page container">
     <section class="card">
-      <h2>Add / Edit Client (Page 1)</h2>
-      <form id="client-form" novalidate>
-        <input type="hidden" id="client-id" />
-
-        <div class="two-col">
-          <label>Name<span class="req">*</span>
-            <input id="name" name="name" required />
-            <small class="err" id="err-name"></small>
-          </label>
-
-          <label>Age<span class="req">*</span>
-            <input id="age" name="age" type="number" min="1" />
-            <small class="err" id="err-age"></small>
-          </label>
+      <div class="card-grid">
+        <div>
+          <h1 class="title">Add / Edit Client</h1>
+          <p class="lead">Capture client info, training history, and planned exercises.</p>
         </div>
+        <form id="client-form" class="form" novalidate>
+          <input type="hidden" id="client-id" />
+          <div class="row two">
+            <label>Name <input id="name" required></label>
+            <label>Age <input id="age" type="number" min="1" max="120" required></label>
+          </div>
+          <div class="row two">
+            <label>Email <input id="email" type="email" required></label>
+            <label>Phone <input id="phone" pattern="^\+?[0-9\s\-]{7,20}$" required></label>
+          </div>
+          <div class="row two">
+            <label>Fitness Goal <input id="goal"></label>
+            <label>Membership Start <input id="startDate" type="date"></label>
+          </div>
+          <label>Training history (one per line)<textarea id="history"></textarea></label>
+          <label>Exercises for next session (one per line)<textarea id="exercises"></textarea></label>
 
-        <div class="two-col">
-          <label>Email<span class="req">*</span>
-            <input id="email" name="email" type="email" required />
-            <small class="err" id="err-email"></small>
-          </label>
-
-          <label>Phone<span class="req">*</span>
-            <input id="phone" name="phone" required placeholder="+20..." />
-            <small class="err" id="err-phone"></small>
-          </label>
-        </div>
-
-        <div class="two-col">
-          <label>Fitness Goal
-            <input id="goal" name="goal" />
-          </label>
-
-          <label>Membership Start Date
-            <input id="startDate" name="startDate" type="date" />
-          </label>
-        </div>
-
-        <label>Training History (notes) — each new line will be kept as a separate history item
-          <textarea id="history" name="history" placeholder="e.g. 2025-10-01: Checked posture"></textarea>
-        </label>
-
-        <label>Exercises for next session (one per line)
-          <textarea id="exercises" name="exercises" placeholder="e.g. Push-ups — 3x10"></textarea>
-        </label>
-
-        <div class="form-actions">
-          <button type="submit" class="btn primary">Save</button>
-          <button type="button" id="cancel" class="btn secondary">Cancel</button>
-        </div>
-      </form>
+          <div class="form-actions">
+            <button class="btn primary" id="save-btn" type="submit">Save Client</button>
+            <button class="btn ghost" id="cancel-btn" type="button">Cancel</button>
+          </div>
+          <div id="form-errors" class="errors"></div>
+        </form>
+      </div>
     </section>
 
     <section class="card small">
-      <h3>Notes</h3>
+      <h3>Quick tips</h3>
       <ul>
         <li>All data saved to <code>localStorage</code>.</li>
-        <li>Age must be &gt; 0 and ≤ 120. Email and phone are validated.</li>
-        <li>After saving you will be redirected to the Client List (Page 2).</li>
+        <li>Age must be &gt; 0 and ≤ 120. Email & phone validated.</li>
+        <li>After saving you can view the client from the Clients page.</li>
       </ul>
     </section>
   </main>
 
-  <footer class="center">FitCRM — Frontend-only. Deploy on GitHub Pages / Netlify.</footer>
-
+  <footer class="site-footer">FitCRM — tailored for fitness instructors</footer>
   <script type="module" src="js/clients.js"></script>
-  <script type="module" src="js/client.js"></script>
-  <script type="module" src="js/new_client.js"></script>
+  <script type="module" src="js/clientModel.js"></script>
+  <script type="module" src="js/newClient.js"></script>
 </body>
 </html>

@@ -1,29 +1,29 @@
 [
   {
-    "id": "id-client1",
-    "name": "Ahmed Hassan",
-    "age": 30,
-    "email": "ahmed.hassan@example.com",
-    "phone": "+201000111222",
+    "id": "client-001",
+    "name": "Ahmed Ali",
+    "age": 31,
+    "email": "ahmed.ali@example.com",
+    "phone": "+201234567890",
     "goal": "Lose 5 kg",
     "startDate": "2025-08-15",
     "history": [
-      "Initial assessment done on 2025-08-15"
+      "2025-08-15: Initial consult"
     ],
     "exercises": [
       "Push-ups \u2014 3x10"
     ]
   },
   {
-    "id": "id-client2",
-    "name": "Mona Yousry",
+    "id": "client-002",
+    "name": "Mona Saleh",
     "age": 27,
-    "email": "mona.yousry@example.com",
-    "phone": "+201099988877",
+    "email": "mona.saleh@example.com",
+    "phone": "+201098765432",
     "goal": "Build muscle",
     "startDate": "2025-09-05",
     "history": [
-      "Joined 2025-09-05 \u2014 program started"
+      "2025-09-05: Started program"
     ],
     "exercises": [
       "Bodyweight Squats \u2014 3x12"
